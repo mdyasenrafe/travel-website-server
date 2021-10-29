@@ -49,6 +49,25 @@ async function run() {
       console.log(result);
       res.json(result);
     });
+    // my orders update
+    app.put("/orders/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: ObjectId(id) };
+      const options = { upsert: true };
+      const newInfo = req.body;
+      const updateDoc = {
+        $set: {
+          status: newInfo.status,
+        },
+      };
+      const result = await ordersCollection.updateOne(
+        query,
+        updateDoc,
+        options
+      );
+      console.log(result);
+      res.json(result);
+    });
 
     console.log("database connect");
   } finally {
