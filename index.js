@@ -23,12 +23,13 @@ async function run() {
     const database = client.db("touristGang");
     const destinationsCollection = database.collection("destinations");
     const ordersCollection = database.collection("orders");
-    // get api
+    // get api by destinations
     app.get("/destinations", async (req, res) => {
       const cursor = destinationsCollection.find();
       const result = await cursor.toArray();
       res.send(result);
     });
+
     // orders post
     app.post("/orders", async (req, res) => {
       const orders = req.body;
@@ -65,7 +66,6 @@ async function run() {
         updateDoc,
         options
       );
-      console.log(result);
       res.json(result);
     });
 
