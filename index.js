@@ -10,7 +10,7 @@ const port = process.env.PORT || 5000;
 // middlecors
 app.use(cors());
 app.use(express.json());
-
+// mongo bd connect
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.5iwe9.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
@@ -29,6 +29,7 @@ async function run() {
       const result = await cursor.toArray();
       res.send(result);
     });
+    // post api by destinations
     app.post("/destinations", async (req, res) => {
       const newDestinations = req.body;
       const result = await destinationsCollection.insertOne(newDestinations);
@@ -73,8 +74,6 @@ async function run() {
       );
       res.json(result);
     });
-
-    console.log("database connect");
   } finally {
   }
 }
