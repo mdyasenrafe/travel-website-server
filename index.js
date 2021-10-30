@@ -29,6 +29,11 @@ async function run() {
       const result = await cursor.toArray();
       res.send(result);
     });
+    app.post("/destinations", async (req, res) => {
+      const newDestinations = req.body;
+      const result = await destinationsCollection.insertOne(newDestinations);
+      res.json(result);
+    });
 
     // orders post
     app.post("/orders", async (req, res) => {
