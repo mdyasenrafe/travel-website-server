@@ -2,7 +2,8 @@
 
 ## About
 
-**Tourist Gang** is a Travel Agency Website. It is a Mern Statck Project. User Can Log in this website. It have an Admin Panel page. It have Its own database. You can post your product by uploading in database in the admin panel add product section. You also can delete any products from database by delete action of manage orders page.[live websilte](https://tourist-gang30.web.app/)
+Tourist Gang is a Travel Agency Website. It is a login system with a firebase and private routes. You can post your destinations by uploading them in the database in the admin panel add destinations section. You also can delete any products from the database by deleting the action of the manage orders page.
+Admin panel, where admin can do CRUD operations..[live websilte](https://tourist-gang30.web.app/)
 
 ## Features
 
