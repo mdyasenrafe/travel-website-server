@@ -6,11 +6,11 @@
 
 ## Features
 
-- user can log in
-- user can delete select services
-- user can find order history
+- Tourist Gang is a Travel Agency Website. It is a Mern Stack Project. It has an Admin Panel page.
+- Users can Log in to this website. You can post your product by uploading it in the database in the admin panel add product section.
 - admin can add services
-- add can appove user select services
+- You also can delete any products from the database by deleting the action of the manage orders page
+- admin can apporve users orders
 - add can delee user select services
 
 ## Font End Technology:
@@ -26,5 +26,6 @@
 - Node
 - Express
 - MongoDb
+
 
 [Font End Repo Link](https://github.com/mdyasenrafe/travel-website)
